@@ -1,0 +1,58 @@
+{
+  "name": "@nikhil_telkar/codeshield",
+  "version": "0.1.0",
+  "description": "Security scanner for AI-generated codebases.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "codeshield": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20.12"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc -p tsconfig.test.json && node --use-bundled-ca --test \"dist-test/tests/**/*.test.js\"",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run lint && npm test && npm run build"
+  },
+  "author": "Nikhil Telkar <nikhiltelkar19@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nikhiltelkar2005-glitch/codeshield_npm_package.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nikhiltelkar2005-glitch/codeshield_npm_package/issues"
+  },
+  "homepage": "https://github.com/nikhiltelkar2005-glitch/codeshield_npm_package#readme",
+  "keywords": [
+    "security",
+    "scanner",
+    "ai-generated-code",
+    "cursor",
+    "copilot",
+    "llm",
+    "sast",
+    "secrets",
+    "linter",
+    "vulnerabilities",
+    "zero-dependencies"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0"
+  }
+}
