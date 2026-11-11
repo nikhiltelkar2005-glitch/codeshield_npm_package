@@ -1,6 +1,6 @@
 {
   "name": "@nikhil_telkar/codeshield",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Security scanner for AI-generated codebases.",
   "type": "module",
   "main": "dist/index.js",
@@ -54,5 +54,8 @@
   "devDependencies": {
     "@types/node": "^22.0.0",
     "typescript": "^5.5.0"
+  },
+  "dependencies": {
+    "@nikhil_telkar/codeshield": "^0.1.0"
   }
 }
